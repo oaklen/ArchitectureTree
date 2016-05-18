@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <div ng-app="ChartsApp">
 
-                <h1 class="text-center">Architecture Tree</h1>
+                <h1 class="text-center">PathBuilder</h1>
 
                 <div ng-controller="filterCtrl">
                     <ng-include src="'js/angular.architectureTree/templates/filter.html'"></ng-include>
@@ -32,23 +32,24 @@
                         </div>
                     </div>
                 </div>
-
+<!-- 
                 <div ng-controller="undoCtrl">
                     <div ng-if="hasHistory()" class="json-upate-label bg-success">Updated JSON <a ng-click="undo()">(undo)</a></div>
                 </div>
                 <div ng-controller="jsonDataCtrl">
-                    <textarea id="json-data" class="form-control" ng-model="data" ng-blur="updateData()"></textarea>
+                    <textarea id="json-data" class="form-control" ng-model="data" ng-blur="updateData()"></textarea> -->
                 </div>
             </div>
         </div>
         <script src="js/vendor/d3.v3.js"></script>
         <script src="js/vendor/angular.min.js"></script>
+
         <script src="js/d3.architectureTree.js"></script>
         <script src="js/angular.architectureTree/app.js"></script>
         <script src="js/angular.architectureTree/controllers/chart.js"></script>
         <script src="js/angular.architectureTree/controllers/filter.js"></script>
         <script src="js/angular.architectureTree/controllers/json-data.js"></script>
-        <script src="js/angular.architectureTree/controllers/panel.js"></script>
+        <script src="js/angular.architectureTree/controllers/panel.js"></script> 
         <script src="js/angular.architectureTree/controllers/undo.js"></script>
         <script src="js/angular.architectureTree/directives/tree-chart.js"></script>
         <script src="js/angular.architectureTree/directives/init-focus.js"></script>
