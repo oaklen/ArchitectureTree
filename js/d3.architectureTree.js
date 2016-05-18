@@ -29,7 +29,7 @@ d3.chart.architectureTree = function() {
 
         d3.select(self.frameElement).style("height", "500px");
         
-        var nodes = tree.nodes(treeData).reverse(),
+        var nodes = tree.nodes(treeData),
             links = tree.links(nodes);
 
         // Normalize for fixed-depth.
@@ -93,7 +93,7 @@ d3.chart.architectureTree = function() {
             });
 
         node.append("circle")
-            .attr("r", 1e-6)
+            .attr("r", function(d) { return 4.5 * (d.size || 1); })
             .style('stroke', function(d) {
                 return d3.scale.linear()
                     .domain([1, 0])
@@ -105,13 +105,11 @@ d3.chart.architectureTree = function() {
                     .domain([1, 0])
                     .range(["white", "#f66"])(typeof d.satisfaction !== "undefined" ? d.satisfaction : 1);
             });
-
         //add text
         node.append("text")
-            // .attr("x", function(d) { return d.children || d._children ? -13 : 13; }) 
             .attr("dy", ".35em")
             .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end";  })
-            .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(180)translate(-8)"; })
+            .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(0)translate(-8)"; })
             .text(function(d) {
                 return d.name;
             });

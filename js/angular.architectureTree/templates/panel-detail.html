@@ -9,14 +9,14 @@
             <div class="panel-body">{{ node.comments }}</div>
         </div>
 
-        <div class="properties" ng-if="node.details.Dependencies">
+<!--         <div class="properties" ng-if="node.details.Dependencies">
             <h5>Depends on</h5>
             <ul>
                 <li ng-repeat="dependency in node.details.Dependencies">
                     {{ dependency }}
                 </li>
             </ul>
-        </div>
+        </div> -->
 
         <div class="properties" ng-if="node.details.Dependents">
             <h5>Dependendents</h5>
@@ -27,16 +27,16 @@
             </ul>
         </div>
 
-        <div class="properties" ng-if="node.details.Technos">
+<!--         <div class="properties" ng-if="node.details.Technos">
             <h5>Technos</h5>
             <ul>
                 <li ng-repeat="techno in node.details.Technos">
                     {{ techno }}
                 </li>
             </ul>
-        </div>
+        </div> -->
 
-        <div class="properties" ng-if="node.details.Host">
+<!--         <div class="properties" ng-if="node.details.Host">
             <h5>Hosts</h5>
             <ul>
                 <li ng-repeat="(hostName, servers) in node.host">
@@ -47,7 +47,7 @@
                     <span ng-if="detail.via">({{ detail.via }})</span>
                 </li>
             </ul>
-        </div>
+        </div> -->
 
     </div>
 </div>
